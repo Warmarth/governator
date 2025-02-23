@@ -1,12 +1,23 @@
 import Image from "next/image";
-
+import Card from "./components/userCard";
 const Dashboard = () => {
+  const user = {
+    imageUrl: "/Frame91.svg",
+    username: "John Doe",
+    id: "12345",
+    kycStatus: "Verified",
+  };
+
+  const copyText = (id) => {
+    window.navigator.clipboard.writeText(id);
+  };
+
   return (
     <div>
       <div className="flex justify-between items-start text-left pt-3">
         <div>
           <section className="space-y-5">
-            <Image src={"/Frame15.svg"} width={500} height={300} />
+            <Card user={user} />
             <div className="flex items-start gap-2 justify-start">
               <Image src={"/Frame92.svg"} width={100} height={100} />
               <Image src={"/Frame93.svg"} width={100} height={100} />

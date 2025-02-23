@@ -48,43 +48,33 @@ export function HomeHeader({ logo, avatarName, avatarImage }) {
               iconName={""}
             />
             <li onClick={handleClick}>
-              <div className="border p-2 rounded-[2rem]">
+              <div className="border  rounded-full">
                 <Logo
                   src={avatarImage}
-                  width={40}
-                  height={40}
+                  width={50}
+                  height={50}
                   spanName={avatarName}
                   span={"text-lg font-bold text-[#fefefe] capitalize "}
                 />
               </div>
               {user && (
-                <div className="bg-slate-900 w-[19rem] h-[6rem] absolute  ">
+                <div
+                  className="bg-slate-900 w-[10rem] h-[7rem] 
+                rounded-lg shadow-lg absolute top-30 right-3"
+                >
                   <NavBarIcon
                     iconName={"my profile"}
                     className={
-                      "list-none absolute top-0 px-2 pt-1 border-b-2 flex flex-row-reverse items-center justify-between gap-12"
+                      "w-full cursor-pointer rounded-t-lg hover:text-slate-100 hover:bg-green-500  list-none absolute top-0 px-2 py-2 border-b-2 flex flex-row-reverse items-center justify-between gap-12"
                     }
                     span={""}
                     icon={<LuContact />}
                   />
+
                   <NavBarIcon
                     iconName={"sign out"}
                     className={
-                      "list-none absolute bottom-0 px-2 pb-1 border-t-2 flex flex-row-reverse  items-center justify-between gap-16"
-                    }
-                    icon={<HiOutlineLogout />}
-                  />
-                  <NavBarIcon
-                    iconName={"sign out"}
-                    className={
-                      "list-none absolute bottom-0 px-2 pb-1 border-t-2 flex flex-row-reverse  items-center justify-between gap-16"
-                    }
-                    icon={<HiOutlineLogout />}
-                  />
-                  <NavBarIcon
-                    iconName={"sign out"}
-                    className={
-                      "list-none absolute bottom-0 px-2 pb-1 border-t-2 flex flex-row-reverse  items-center justify-between gap-16"
+                      "w-full cursor-pointer list-none absolute rounded-b-lg  hover:text-slate-100 hover:bg-green-500 bottom-0 px-2 py-2 border-t-2 flex flex-row-reverse  items-center justify-between gap-16"
                     }
                     icon={<HiOutlineLogout />}
                   />
